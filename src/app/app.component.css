@@ -1,0 +1,116 @@
+.parallax {
+  background-image: url("/assets/images/amongus.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  position: relative;
+}
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-10px) scale(10.5);
+  background-size: 100%;
+  z-index: -1;
+}
+#nav-bar {
+  position: fixed;
+  background-color: rgb(14, 32, 92);
+  width: 100%;
+  height: 60px;
+  list-style-type: none;
+  margin-bottom: 7px;
+  margin-top: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: 5px;
+}
+
+.nav-button {
+  align-self: center;
+  margin: 25px 1.5% 25px 1.5%;
+}
+
+li a {
+  color: azure;
+  font-size: min(3.5vw, 25px);
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+li a:link {
+  text-decoration: none;
+}
+
+li a:visited {
+  text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: none;
+}
+
+li a:active {
+  text-decoration: none;
+}
+
+.content {
+  padding-top: 70px;
+  text-align: center;
+}
+#about {
+}
+.name {
+  color: rgb(14, 32, 92);
+  font-size: min(100px, 20vw);
+  font-family: "Lucida Console", "Courier New", monospace;
+  margin: 10px;
+}
+
+.profile {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5px;
+}
+.face-picture {
+  width: 443px;
+}
+.description {
+  padding: 20px;
+  font-size: min(25px, 5vw);
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+@media screen and (max-width: 765px) {
+  .profile {
+    display: block;
+  }
+  .face-picture {
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+    margin: 0 auto;
+  }
+  .description {
+    text-align: center;
+  }
+}
+
+#experience {
+  height: 500px;
+}
+#projects {
+  height: 500px;
+}
+#contact {
+  height: 500px;
+}

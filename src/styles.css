@@ -1,5 +1,6 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
 html {
-  background-color: azure;
   /* background-color: rgb(14, 32, 92); */
   scroll-behavior: smooth;
 }

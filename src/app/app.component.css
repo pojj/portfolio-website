@@ -9,9 +9,10 @@
   padding: 0px;
   display: flex;
   justify-content: flex-end;
+  z-index: 1;
 }
 
-.logo {
+.my-logo {
   margin-right: auto;
   margin-left: 5px;
   width: min(126px, 17vw);
@@ -68,7 +69,7 @@ li a:active {
 .face-picture {
   width: 443px;
 }
-.description {
+.my-description {
   padding: 20px;
   font-size: min(25px, 5vw);
   font-family: "Lucida Console", "Courier New", monospace;
@@ -80,7 +81,7 @@ li a:active {
   .face-picture {
     display: flex;
     justify-content: center;
-    width: 60vw;
+    width: 75vw;
     margin: 0 auto;
   }
   .description {
@@ -88,8 +89,17 @@ li a:active {
   }
 }
 .btn-primary {
-  background-color: rgb(42, 59, 118);
+  font-family: "Lucida Console", "Courier New", monospace;
+  background-color: rgb(14, 32, 92);
   border: rgb(14, 32, 92);
+}
+.btn-secondary {
+  font-family: "Lucida Console", "Courier New", monospace;
+  background-color: rgb(48, 59, 114);
+  border: rgb(48, 59, 114);
+}
+.btn-secondary:active {
+  background-color: rgb(49, 88, 195);
 }
 
 .heading {
@@ -102,22 +112,22 @@ li a:active {
 .inline {
   max-width: 1000px;
   display: flex;
+  padding: 5px;
   justify-content: center;
   margin: 0px auto;
 }
-.logo-img-1 {
+.img-left {
   width: 300px;
-  height: 124px;
   margin: auto 15px;
 }
-.experience-title {
+.title {
   margin: 10px 10px 10px 30px;
   font-size: min(30px, 6.5vw);
   font-family: "Lucida Console", "Courier New", monospace;
   font-weight: bold;
   text-align: left;
 }
-.experience-description {
+.description {
   margin: 5px 10px 10px 30px;
   font-size: min(17px, 4.5vw);
   text-align: left;
@@ -135,12 +145,12 @@ li a:active {
   .inline {
     display: block;
   }
-  .experience-title {
+  .title {
     text-align: center;
     margin: 10px auto;
     padding: 5px;
   }
-  .experience-description {
+  .description {
     text-align: center;
     margin: 10px auto;
     padding: 5px;
@@ -152,8 +162,19 @@ li a:active {
   }
 }
 
-#projects {
-  height: 500px;
+.container {
+  width: 90vw;
+  max-width: 1000px;
+  padding: 0px;
+  border: 3px solid rgb(14, 32, 92);
+  border-radius: 5px;
+}
+.btn.toggle {
+  border-radius: 0px;
+  font-weight: bold;
+}
+.btn-group {
+  display: flex;
 }
 #contact {
   height: 500px;

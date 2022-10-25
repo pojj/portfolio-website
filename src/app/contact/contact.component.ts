@@ -9,10 +9,15 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
   constructor() {}
 
+  ngOnInit(): void {}
+
   contactForm = new FormGroup({
     email: new FormControl(
       '',
-      Validators.compose([Validators.email, Validators.required])
+      Validators.compose([
+        Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
+        Validators.required,
+      ])
     ),
     subject: new FormControl('', Validators.required),
     body: new FormControl('', Validators.required),
@@ -24,23 +29,7 @@ export class ContactComponent implements OnInit {
   get subject() {
     return this.contactForm.get('subject');
   }
-
   get body() {
     return this.contactForm.get('body');
   }
-
-  submit() {
-    let body = this.contactForm.get('body');
-    let subject = this.contactForm.get('subject');
-    if (body == null || subject == null) {
-      return;
-    }
-    window.location.href =
-      'mailto:williambsong@gmail.com?subject=' +
-      subject.value +
-      ' &body=' +
-      body.value +
-      '\r\n';
-  }
-  ngOnInit(): void {}
 }
